@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,16 +8,17 @@ import { CommonModule } from '@angular/common';
   templateUrl: './title.component.html',
   styleUrl: './title.component.css',
 })
-export class TitleComponent {
-  public title = 'Bem vindo ao primeiro projeto!';
+export class TitleComponent implements OnChanges, OnDestroy {
+  @Input() title: string = 'Bem vindo ao primeiro projet!';
+  @Input() name: string = 'Name';
+  @Input() email: string = 'Email';
 
-  constructor() {}
 
-  public setTitle(title: string) {
-    this.title = title;
+  ngOnChanges(): void {
+    console.log('Anderson mudou!');
   }
 
-  public getTitle(): string {
-    return this.title;
+  ngOnDestroy(): void {
+    console.log('Anderson destruiu!');
   }
 }

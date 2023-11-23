@@ -1,8 +1,0 @@
-.title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  background-color: rgb(255, 224, 85);
-  border-radius: 10px;
-}

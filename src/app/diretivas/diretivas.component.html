@@ -26,12 +26,12 @@
     </section>
   </div>
 
-  <section
+  <!-- <section
     [ngClass]="getClasses()"
     [style]="{ cursor: 'pointer', margin: '2rem 0' }"
   >
     <h1>Estamos Usando ngClass</h1>
-  </section>
+  </section> -->
   <!-- Aqui estou usando o [ngClass] para alterar o estilo do componente e usando uma função chamada getClasses para retornar o estilo -->
 </div>
 
@@ -44,6 +44,8 @@
 <hr />
 
 <ng-template #idade> </ng-template>
+
+<!--........................ ngIF...................... -->
 
 <p *ngIf="mostrar">Agora sou True</p>
 
@@ -77,3 +79,34 @@
 [ngTemplate]
 
 -->
+
+<!--........................ ngFor...................... -->
+
+<ul>
+  <li *ngFor="let item of diretivasFor; let i = index" (click)="remover(i)">
+    {{ item.id }} - {{ item.idade }} - {{ item.name }} - {{ item.sex }}
+  </li>
+  <button (click)="adicionar()" [style]="{ padding: '1rem' }">
+    Adicionar Valores
+  </button>
+  <hr />
+</ul>
+
+<!-- (click)="remover(i) esta sendo chamado quando o botão for clicado e o i é o indice do item -->
+
+<!--........................ ngSwhitch...................... -->
+
+<div [ngSwitch]="isName(name)">
+  <input
+    type="text"
+    [(ngModel)]="name"
+    [placeholder]="placeholder"
+    [style]="{ padding: '1rem' }"
+  />
+  <p *ngSwitchCase="'anderson'">Agora sou Kalleo</p>
+  <p *ngSwitchCase="'kalleo'">Agora sou Kesley</p>
+  <p *ngSwitchCase="'bruno'">Agora sou Bruno</p>
+  <p *ngSwitchDefault>...</p>
+</div>
+
+<hr />

@@ -1,1 +1,43 @@
-<p>event works!</p>
+<div>
+  <hr />
+  <h1>Eventos</h1>
+
+  <button (click)="onClick2()">Sem paramentro</button>
+  <button (click)="onClick('Anderson consequi')">Com paramentro</button>
+  <!-- (click)="onClick()" é chamada de evento dde clique no botão e esse onclick é o evento uma function que é chamada quando o botão é clicado. e ela ta sendo criada dentro do componente event.component, tanto pode colocar o nome dentro do paramentro da funçao e como pode colocar o nome da function -->
+
+  <hr />
+
+  <div
+    style="
+      background-color: brown;
+      width: 200px;
+      height: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    "
+    (mousemove)="onMouseMove($event)"
+  >
+    <p style="font-size: 50px">{{ age }}</p>
+  </div>
+</div>
+
+<!--
+  (click)
+  (change)
+  (blur)
+  (focus)
+  (keydown)
+  (keyup)
+  (keypress)
+  (mouseenter)
+  (mouseleave)
+  (mouseover)
+  (mouseout)
+  (mousedown)
+  (mouseup)
+  (mousemove)
+  (load)
+  (unload)
+ -->

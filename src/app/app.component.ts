@@ -4,6 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
+import { EventComponent } from './event/event.component';
 
 @Component({
   selector: 'app-root',
@@ -13,12 +14,14 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
     RouterOutlet,
     DataBidingComponent,
     PropertyBindingComponent,
-    DiretivasComponent
+    DiretivasComponent,
+    EventComponent,
   ],
   template: `
     <app-data-biding></app-data-biding>
     <app-property-binding></app-property-binding>
     <app-diretivas></app-diretivas>
+    <app-event></app-event>
     <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {

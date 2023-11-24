@@ -5,19 +5,29 @@
   <!-- [*ngFor] será o loop para mostrar o componente -->
   <h1>Loop</h1>
 
+  <!-- [ngStyle] será o estilo do componente -->
+
   <div
     *ngFor="let item of diretivasFor"
     [ngStyle]="{
-      'background-color': item.sex === 'male' ? 'blue' : 'red',
+      'background-color': item.idade > 18 ? 'blue' : 'red',
       cursor: 'pointer'
     }"
   >
-    <h1>{{ item.name }}</h1>
-    <p *ngIf="item.idade > 18; else localReference">Idade: {{ item.idade }}</p>
-    <p>Sexo: {{ item.sex }}</p>
-    <hr />
+    <!-- [ngIf] é a condição para mostrar o componente se a idade for maior que 18 -->
+
+    <section *ngIf="item.idade > 18; else localReference">
+      <h1>{{ item.name }}</h1>
+      <p *ngIf="item.idade > 18; else localReference">
+        Idade: {{ item.idade }}
+      </p>
+      <p>Sexo: {{ item.sex }}</p>
+      <hr />
+    </section>
   </div>
 </div>
+
+<!-- <ng-template> serve para mostrar o componente caso a condição seja verdadeira ou falsa -->
 
 <ng-template #localReference>
   <p>Menor de idade</p>

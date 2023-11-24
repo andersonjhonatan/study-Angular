@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { DataBidingComponent } from './data-biding/data-biding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { DiretivasComponent } from './diretivas/diretivas.component';
 
 @Component({
   selector: 'app-root',
@@ -12,9 +13,12 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
     RouterOutlet,
     DataBidingComponent,
     PropertyBindingComponent,
+    DiretivasComponent
   ],
-  template: ` <app-data-biding></app-data-biding>
+  template: `
+    <app-data-biding></app-data-biding>
     <app-property-binding></app-property-binding>
+    <app-diretivas></app-diretivas>
     <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {

@@ -41,4 +41,8 @@ export class DiretivasComponent {
       'classe-idade': this.mostrar
     };
   }
+
+  public onClickMostre() {
+    this.mostrar = !this.mostrar
+  }
 }

@@ -45,6 +45,22 @@
 
 <ng-template #idade> </ng-template>
 
+<p *ngIf="mostrar">Agora sou True</p>
+
+<p *ngIf="!mostrar">Agora sou False</p>
+
+<!-- [ngIf] é a condição para mostrar o componente posso usar dessa maneira de cima quanto na maneira de baixo -->
+
+<p *ngIf="mostrar; else flaseIF">Agora sou True</p>
+
+<ng-template #flaseIF>
+  <p>Agora sou False</p>
+</ng-template>
+
+<button (click)="onClickMostre()" [style]="{ padding: '1rem' }">
+  CLICA POR favor
+</button>
+
 <!-- como são dividas as diretivas, elas tem duas formas de uso :
 
 - diretivas de atributos sao usadas para alterar o estilo do componente

@@ -5,6 +5,8 @@ import { DataBidingComponent } from './data-biding/data-biding.component';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { EventComponent } from './event/event.component';
+import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +18,13 @@ import { EventComponent } from './event/event.component';
     PropertyBindingComponent,
     DiretivasComponent,
     EventComponent,
+    TwoWayBindingComponent,
   ],
-  template: `
-    <app-data-biding></app-data-biding>
+  template: ` <app-data-biding></app-data-biding>
     <app-property-binding></app-property-binding>
     <app-diretivas></app-diretivas>
     <app-event></app-event>
+    <app-two-way-binding></app-two-way-binding>
     <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {

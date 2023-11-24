@@ -1,0 +1,13 @@
+<div style="background-color: blueviolet; margin-top: 1rem">
+  <hr />
+  <h1>Vamos falar - Two Way Binding</h1>
+
+  <input type="text" [(ngModel)]="name" [placeholder]="placeholder" />
+  {{ name }}
+  <hr />
+
+  <input type="number" [(ngModel)]="age" [placeholder]="placeholderAge" />
+  {{ age }}
+</div>
+
+<!--  [(ngModel)]="name" ===> É um conceito que se refere à sincronização automática de dados entre o modelo e a visualização e vice-versa.  -->

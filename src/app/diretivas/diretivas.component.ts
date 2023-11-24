@@ -9,6 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './diretivas.component.css',
 })
 export class DiretivasComponent {
+
+  public condicao = true;
+  public mostrar = true
+
   public diretivasFor = [
     {
       id: 1,
@@ -29,4 +33,12 @@ export class DiretivasComponent {
       sex: 't',
     },
   ];
+
+  public getClasses() {
+    return {
+      'classe-ativa': this.condicao,
+      'classe-inativa': !this.condicao,
+      'classe-idade': this.mostrar
+    };
+  }
 }

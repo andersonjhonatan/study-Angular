@@ -25,6 +25,14 @@
       <hr />
     </section>
   </div>
+
+  <section
+    [ngClass]="getClasses()"
+    [style]="{ cursor: 'pointer', margin: '2rem 0' }"
+  >
+    <h1>Estamos Usando ngClass</h1>
+  </section>
+  <!-- Aqui estou usando o [ngClass] para alterar o estilo do componente e usando uma função chamada getClasses para retornar o estilo -->
 </div>
 
 <!-- <ng-template> serve para mostrar o componente caso a condição seja verdadeira ou falsa -->
@@ -32,3 +40,24 @@
 <ng-template #localReference>
   <p>Menor de idade</p>
 </ng-template>
+
+<hr />
+
+<ng-template #idade> </ng-template>
+
+<!-- como são dividas as diretivas, elas tem duas formas de uso :
+
+- diretivas de atributos sao usadas para alterar o estilo do componente
+
+[ngStyle]
+[ngClass]
+[ngModel]
+
+- diretivas de estruturais são usadas para alterar o conteudo do componente
+
+[ngIf]
+[ngFor]
+[ngSwitch]
+[ngTemplate]
+
+-->

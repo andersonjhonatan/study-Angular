@@ -1,3 +1,5 @@
+<ng-content select=".card-title"></ng-content>
+
 <div>
   <!-- [*ngIf]  será a condição para mostrar o componente -->
   <h1>Condicional</h1>
@@ -158,3 +160,9 @@
 <button (click)="salvarTemplate()">Salvar</button>
 
 <!-- ngTemplate serve para mostrar o componente, antes mesmo que o componente seja renderizado no html e para mostrar o componente voce deve fazer uma condição -->
+
+<!--........................ ngContent...................... -->
+
+<ng-content select=".card-content"></ng-content>
+
+<!--  É uma diretiva do Angular que permite a passagem de conteúdo para um componente de forma flexível e dinâmica -->

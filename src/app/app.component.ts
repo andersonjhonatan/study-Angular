@@ -20,11 +20,17 @@ import { FormsModule } from '@angular/forms';
     EventComponent,
     TwoWayBindingComponent,
   ],
-  template: ` <!-- <app-data-biding></app-data-biding>
-    <app-property-binding></app-property-binding>
-    <app-two-way-binding></app-two-way-binding>
-    <app-event></app-event> -->
-    <app-diretivas></app-diretivas>
+  template: ` <app-data-biding></app-data-biding>
+    <!-- <app-property-binding>
+
+      </app-property-binding>
+      <app-two-way-binding></app-two-way-binding>
+      <app-event></app-event> -->
+      <!-- ngContent -->
+      <!-- <app-diretivas>
+        <h1 class="card-title">Título do Cartão</h1>
+        <h1 class="card-content">Conteúdo do Cartão</h1>
+    </app-diretivas> -->
     <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {

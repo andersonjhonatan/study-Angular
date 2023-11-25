@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: #f5f5;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.classe-ativa {
+  background-color: green;
+  padding: 5px 25px;
+  border-radius: 10px;
+}
+
+.classe-inativa {
+  background-color: rgb(255, 94, 0);
+}

@@ -6,8 +6,8 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { DiretivasComponent } from './diretivas/diretivas.component';
 import { EventComponent } from './event/event.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
-import { FormsModule } from '@angular/forms';
 import { PipesComponent } from './pipes/pipes.component';
+import { SharedModule } from './shared/shared.module';
 
 @Component({
   selector: 'app-root',
@@ -21,8 +21,10 @@ import { PipesComponent } from './pipes/pipes.component';
     EventComponent,
     TwoWayBindingComponent,
     PipesComponent,
+    SharedModule,
   ],
-  template: ` <app-data-biding></app-data-biding>
+  template: ` <app-header></app-header>
+    <app-data-biding></app-data-biding>
     <!-- <app-property-binding>
 
       </app-property-binding>
@@ -35,6 +37,7 @@ import { PipesComponent } from './pipes/pipes.component';
     </app-diretivas> -->
 
     <app-pipes></app-pipes>
+    <app-footer></app-footer>
     <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {

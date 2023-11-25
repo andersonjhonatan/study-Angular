@@ -7,6 +7,7 @@ import { DiretivasComponent } from './diretivas/diretivas.component';
 import { EventComponent } from './event/event.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { FormsModule } from '@angular/forms';
+import { PipesComponent } from './pipes/pipes.component';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ import { FormsModule } from '@angular/forms';
     DiretivasComponent,
     EventComponent,
     TwoWayBindingComponent,
+    PipesComponent,
   ],
   template: ` <app-data-biding></app-data-biding>
     <!-- <app-property-binding>
@@ -26,11 +28,13 @@ import { FormsModule } from '@angular/forms';
       </app-property-binding>
       <app-two-way-binding></app-two-way-binding>
       <app-event></app-event> -->
-      <!-- ngContent -->
-      <!-- <app-diretivas>
+    <!-- ngContent -->
+    <!-- <app-diretivas>
         <h1 class="card-title">Título do Cartão</h1>
         <h1 class="card-content">Conteúdo do Cartão</h1>
     </app-diretivas> -->
+
+    <app-pipes></app-pipes>
     <router-outlet></router-outlet>`,
 })
 export class AppComponent implements OnInit {

@@ -14,7 +14,8 @@ export class DiretivasComponent {
   public mostrar = true;
   public name: string = '';
   public placeholder: string = 'Digite seu nome';
-  public editandoIndex: number = -1
+  public editandoIndex: number = -1;
+  public newNameTemplate: string = '';
 
   public diretivasFor: Array<{
     id: number;
@@ -81,11 +82,18 @@ export class DiretivasComponent {
 
   public editar(event: number) {
     this.newValue = this.listaNewValue[event].nome;
-
   }
 
   public salvarEditado(event: number) {
     this.listaNewValue[event].nome = this.newValue;
+  }
 
+  public salvarTemplate() {
+    this.diretivasFor.push({
+      id: this.diretivasFor.length + 1,
+      name: this.newNameTemplate,
+      idade: 25,
+      sex: 'male',
+    });
   }
 }

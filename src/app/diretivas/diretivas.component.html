@@ -146,3 +146,15 @@
 </ul>
 
 <!-- ngModel e usado para alterar o valor do componente e o [(ngModel)] e usado para alterar o valor do componente -->
+
+<!--........................ ngTemplate...................... -->
+
+<ng-template ngFor let-item [ngForOf]="diretivasFor">
+  <h1>{{ item.name }}</h1>
+</ng-template>
+
+<input type="text" [(ngModel)]="newNameTemplate" />
+
+<button (click)="salvarTemplate()">Salvar</button>
+
+<!-- ngTemplate serve para mostrar o componente, antes mesmo que o componente seja renderizado no html e para mostrar o componente voce deve fazer uma condição -->

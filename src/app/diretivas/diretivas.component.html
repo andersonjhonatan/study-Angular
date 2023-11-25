@@ -106,7 +106,43 @@
   <p *ngSwitchCase="'anderson'">Agora sou Kalleo</p>
   <p *ngSwitchCase="'kalleo'">Agora sou Kesley</p>
   <p *ngSwitchCase="'bruno'">Agora sou Bruno</p>
-  <p *ngSwitchDefault>...</p>
+  <p *ngSwitchDefault></p>
 </div>
 
 <hr />
+
+<!--
+  O switch do angular tem o
+
+  [ngSwitchCase] = CASE: o serve para mostrar o componente e o
+
+  [ngSwitch] = Type  e o serve para condição para mostrar e o
+
+  [ngSwitchDefault] = Default
+-->
+
+<!--........................ ngModel...................... -->
+
+<input type="text" [(ngModel)]="newValue" [style]="{ padding: '0.5rem' }" />
+
+<button
+  (click)="salvar()"
+  [style]="{ padding: '0.5rem', 'margin-top': '1rem' }"
+>
+  Salvar
+</button>
+
+{{ newValue }}
+
+<ul>
+  <li
+    *ngFor="let item of listaNewValue; let i = index"
+    [style]="{ color: 'white' }"
+  >
+    {{ item.nome }}
+    <button (click)="editar(i)">Editar</button>
+    <button (click)="salvarEditado(i)">Salvar</button>
+  </li>
+</ul>
+
+<!-- ngModel e usado para alterar o valor do componente e o [(ngModel)] e usado para alterar o valor do componente -->

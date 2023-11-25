@@ -14,6 +14,7 @@ export class DiretivasComponent {
   public mostrar = true;
   public name: string = '';
   public placeholder: string = 'Digite seu nome';
+  public editandoIndex: number = -1
 
   public diretivasFor: Array<{
     id: number;
@@ -40,6 +41,9 @@ export class DiretivasComponent {
       sex: 't',
     },
   ];
+
+  public newValue: string = '';
+  public listaNewValue: Array<{ nome: string }> = [];
 
   public getClasses() {
     return {
@@ -68,5 +72,20 @@ export class DiretivasComponent {
 
   public isName(name: string) {
     return name.trim().toLowerCase();
+  }
+
+  public salvar() {
+    this.listaNewValue.push({ nome: this.newValue });
+    this.newValue = '';
+  }
+
+  public editar(event: number) {
+    this.newValue = this.listaNewValue[event].nome;
+
+  }
+
+  public salvarEditado(event: number) {
+    this.listaNewValue[event].nome = this.newValue;
+
   }
 }

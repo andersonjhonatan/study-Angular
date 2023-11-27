@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { DataBidingComponent } from './data-biding/data-biding.component';
@@ -8,6 +8,7 @@ import { EventComponent } from './event/event.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { SharedModule } from './shared/shared.module';
+import { InputComponent } from './shared/input/input.component';
 
 @Component({
   selector: 'app-root',
@@ -22,6 +23,7 @@ import { SharedModule } from './shared/shared.module';
     TwoWayBindingComponent,
     PipesComponent,
     SharedModule,
+    InputComponent,
   ],
   template: ` <app-header></app-header>
     <app-data-biding></app-data-biding>
@@ -38,12 +40,20 @@ import { SharedModule } from './shared/shared.module';
 
     <app-pipes></app-pipes>
     <app-footer></app-footer>
+    <app-input [contact]="newContact" [disabled]="disabled"></app-input>
+    <button (click)="addNewContact()">Adicionar</button>
+    <button (click)="disabledTreino()">Esconder / Mostrar</button>
     <router-outlet></router-outlet>`,
 })
-export class AppComponent implements OnInit {
-  constructor() {}
+export class AppComponent {
+  public newContact: string = 'jose';
+  public disabled: boolean = true;
 
-  ngOnInit(): void {
-    console.log('app init');
+  public addNewContact() {
+    this.newContact = 'Anderson';
+  }
+
+  public disabledTreino() {
+    this.disabled = !this.disabled;
   }
 }

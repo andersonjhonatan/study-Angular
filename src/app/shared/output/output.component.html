@@ -1,0 +1,7 @@
+<div>
+  <p *ngFor="let item of dados; let i = index">
+    {{ item.nome }} - {{ item.idade }}
+    <button (click)="enviarDados2(i)">EnviarDados</button>
+  </p>
+  <button (click)="enviarDados3()">EnviarDados</button>
+</div>
